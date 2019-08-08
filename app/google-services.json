@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1014482293796",
+    "firebase_url": "https://droidconke-e4db3.firebaseio.com",
+    "project_id": "droidconke-e4db3",
+    "storage_bucket": "droidconke-e4db3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014482293796:android:15c23e5fbfec6773",
+        "android_client_info": {
+          "package_name": "com.android.droidconke"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014482293796-8qk3h440rc83atu8dntta39visdq1brk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.droidconke",
+            "certificate_hash": "2c766fd73f76a90a60d98c6fabf20e8e0020ed26"
+          }
+        },
+        {
+          "client_id": "1014482293796-226gj6uh7fpe198017rftgicf1tj2acn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjCPfeIM6Nd8V7pqAMkK5bB1BvmXp3XOs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1014482293796-226gj6uh7fpe198017rftgicf1tj2acn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
