@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.android.droidconke"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -31,6 +31,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.0.1'
 
     implementation 'com.google.code.gson:gson:2.8.2'
+
     //    This are the dependencies that are needed for firebase intergration
     implementation "com.google.firebase:firebase-messaging:19.0.1"
 

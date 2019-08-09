@@ -1,5 +1,6 @@
 package com.android.droidconke;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -36,50 +37,12 @@ public class MainActivity extends AppCompatActivity {
                 params.putString("Action","AddingAdminChat");
                 addAdminChatAnalysis(MainActivity.this,"AdminChat",params);
 
-                sendANotification();
+                Intent intent = new Intent(MainActivity.this,myIntentService.class);
+                startService(intent);
             }
         });
     }
 
-    //    Will build this method
-    public void sendANotification()
-    {
-        Log.d("NotificationSending","The method has been called to send a notification");
-//        String regToken = returnRegistrationToken();
-        String regToken = " ";
-        String topic = "/topics/userABC";
-        Log.d("RegistrationToken","This is the registration token " + regToken);
-        OkHttpClient client = new OkHttpClient();
-        JSONObject json=new JSONObject();
-        JSONObject dataJson=new JSONObject();
-        try {
-            dataJson.put("body", "Reminder about the chama event \n taking place today");
-            dataJson.put("title", "Chama event");
-            json.put("notification", dataJson);
-            json.put("to", topic);
-        }
-        catch (Exception e)
-        {
-            Log.d("NotificationSettingUp", "An error was caught : details " + e.getMessage());
-        }
-        RequestBody body = RequestBody.create(JSON, json.toString());
-        Request request = new Request.Builder()
-                .header("Authorization","key="+LEGACY_SERVER)
-                .url("https://fcm.googleapis.com/fcm/send")
-                .post(body)
-                .build();
-        try {
-            Response response = client.newCall(request).execute();
-            String finalResponse = response.body().string();
-        }
-        catch (Exception e)
-        {
-            Log.d("NotificationExecution","An error was caught : details " + e.getMessage());
-            e.printStackTrace();
-        }
-//          String finalResponse = response.body().string();
 
-        Log.d("NotificationSending","The method has completed");
-    }
 
 }

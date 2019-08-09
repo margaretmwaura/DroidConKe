@@ -14,8 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name=".UserFirebaseMessagingService"
-            android:exported="false"
+            android:name=".myIntentService"
+            android:exported="false"></service>
+        <service
+            android:name="com.android.droidconke.UserFirebaseMessagingService"
             android:permission="com.google.android.c2dm.permission.SEND"
             android:stopWithTask="false">
             <intent-filter>
@@ -23,8 +25,8 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
-
         </service>
+
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/default_notification_channel_id" />

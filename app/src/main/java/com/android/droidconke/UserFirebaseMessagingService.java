@@ -39,7 +39,7 @@ public class UserFirebaseMessagingService extends FirebaseMessagingService {
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         long now = SystemClock.elapsedRealtime();
 
-        long alarmtime = now + 120000L;
+        long alarmtime = now;
 
         alarmManager.set(AlarmManager.ELAPSED_REALTIME,alarmtime,pendingIntent);
 
